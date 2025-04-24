@@ -57,7 +57,7 @@ def reverse_geocode():
         location = geolocator.reverse(f'{latitude}, {longitude}')
 
         # return the location as a JSON object
-        return jsonify({'location': location.raw})
+        return jsonify(location.raw)
 
     except Exception as e:
         return jsonify({'error': str(e)})
